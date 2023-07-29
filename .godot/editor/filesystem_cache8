@@ -1,0 +1,9 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1690602910
+Camera3D.gd::GDScript::-1::1690504804::0::1::::<>Camera3D<>::
+god.tscn::PackedScene::1110959681595978902::1690505001::0::1::::<><>::
+icon.svg::CompressedTexture2D::5291190288163571089::1690498220::1690498224::1::::<><>::
+massive_body.gd::GDScript::-1::1690504189::0::1::::MassiveBody<>Node3D<>::
+massive_body.tscn::PackedScene::7098763124155903536::1690505001::0::1::::<><>::res://massive_body.gd
+universe.gd::GDScript::-1::1690504929::0::1::::Universe<>WorldEnvironment<>::
+universe.tscn::PackedScene::6207544634292017495::1690505001::0::1::::<><>::res://universe.gd<>uid://c8exud12swxbc::::res://massive_body.tscn<>res://Camera3D.gd

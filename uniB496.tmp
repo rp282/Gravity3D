@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuo8maj50l51d"]
+
+[ext_resource type="Script" path="res://universe.gd" id="1_cya43"]
+
+[sub_resource type="Environment" id="Environment_qcjm5"]
+background_mode = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s03dw"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3iv44"]
+material = SubResource("StandardMaterial3D_s03dw")
+
+[node name="Universe" type="WorldEnvironment"]
+environment = SubResource("Environment_qcjm5")
+script = ExtResource("1_cya43")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 9.686
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="OmniLight3D"]
+mesh = SubResource("SphereMesh_3iv44")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0)

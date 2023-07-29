@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8exud12swxbc"]
+
+[ext_resource type="Script" path="res://massive_body.gd" id="1_kdacd"]
+
+[node name="MassiveBody" type="Node3D"]
+script = ExtResource("1_kdacd")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]

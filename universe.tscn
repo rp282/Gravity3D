@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuo8maj50l51d"]
+
+[ext_resource type="Script" path="res://universe.gd" id="1_cya43"]
+[ext_resource type="PackedScene" uid="uid://c8exud12swxbc" path="res://massive_body.tscn" id="2_a2x1c"]
+[ext_resource type="Script" path="res://Camera3D.gd" id="3_dhpb0"]
+
+[sub_resource type="Environment" id="Environment_6o8ci"]
+background_mode = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkvnx"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 11.37
+
+[sub_resource type="SphereMesh" id="SphereMesh_k5frd"]
+material = SubResource("StandardMaterial3D_wkvnx")
+
+[node name="Universe" type="WorldEnvironment"]
+environment = SubResource("Environment_6o8ci")
+script = ExtResource("1_cya43")
+massive_body = ExtResource("2_a2x1c")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 50.0
+light_size = 1.0
+omni_range = 200000.0
+omni_attenuation = 0.3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="OmniLight3D"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_k5frd")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0547619, 0, 481.244)
+script = ExtResource("3_dhpb0")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 500, 0)
+light_energy = 50.0
+spot_range = 4000.0
+spot_angle = 39.86
